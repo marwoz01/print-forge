@@ -1,4 +1,5 @@
 import { FaRegHeart } from "react-icons/fa6"
+import Image from "next/image"
 import Pill from "@/app/components/Pill"
 import type { ModelDetailPageProps } from "@/app/types"
 import { getModelById } from "@/app/lib/models"
@@ -13,10 +14,11 @@ export default async function ModelDetailPage({ params }: ModelDetailPageProps) 
       <article className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Image Section */}
         <figure className="relative overflow-hidden rounded-lg shadow-lg aspect-square">
-          <img
-            src={placeholderImg.src}
+          <Image
+            src={placeholderImg}
             alt={`3D model of ${model.name}`}
             className="absolute inset-0 object-cover w-full h-full"
+            fill
           />
         </figure>
 
