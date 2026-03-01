@@ -1,4 +1,4 @@
-import type { ReactNode, HTMLAttributes } from "react";
+import type { ReactNode } from "react";
 
 // Data Types
 export type Model = {
@@ -47,6 +47,12 @@ export type ModelsGridProps = {
   models: Model[];
 };
 
-export type PillProps = HTMLAttributes<HTMLSpanElement> & {
+export type PillProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+export type NavLinkProps = {
+  href: string;
   children: ReactNode;
 };
